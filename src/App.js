@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import About from './pages/about';
-import Skills from './pages/skills';
-import Resume from './pages/resume';
+import Navbar from './components/Navbar/Navbar';
+import About from './pages/about/about';
+import Skills from './pages/skills/skills';
+import Resume from './pages/resume/resume';
 import DeskImage from './images/Desk.png';
-import Desk from './components/Desk';
+import Desk from './components/Desk/Desk';
 
 //MUI
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
