@@ -1,0 +1,30 @@
+.projectPageMain {
+	font-size: 0.5rem;
+	width: auto;
+	height: 60vh;
+	background-color: rgb(16, 115, 224);
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.projectPageMain h2 {
+	font-size: 50px;
+}
+
+.centeringBlock {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 100%;
+}
+.projectPageAbout {
+	text-align: center;
+	font-size: large;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	width: 55%;
+	text-align: center;
+}
