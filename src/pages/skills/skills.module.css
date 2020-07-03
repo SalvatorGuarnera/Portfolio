@@ -1,0 +1,90 @@
+.projectPageMain {
+	font-size: 0.5rem;
+	width: auto;
+	height: 60vh;
+	background-color: rgb(16, 115, 224);
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.centeringBlock {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 100%;
+}
+.skillsUpperhalf {
+	width: auto;
+	height: 150px;
+	background-color: rgb(16, 115, 224);
+	z-index: 1;
+	margin-bottom: -100px;
+}
+.skillsLowerhalf {
+	width: 100%;
+	height: 500px;
+	z-index: 1;
+	text-align: center;
+}
+.skillsLowerhalfFiller {
+	margin-top: 100px;
+	width: 100%;
+	height: 80vh;
+	background-color: white;
+	position: absolute;
+}
+.skillsColumnGrid {
+	background-color: white;
+	width: 90vw;
+	height: 80vh;
+	position: relative;
+	display: inline-block;
+	border-width: 1px;
+	border: 1px 1px 1px 1px;
+	border-radius: 10px 10px 10px 10px;
+	border-color: rgb(16, 115, 224);
+	border-style: solid;
+	text-align: center;
+}
+.skillsColumnCellLeft {
+	height: 100%;
+	width: 33%;
+	background-color: white;
+	display: inline-block;
+}
+.skillsColumnCellMid {
+	height: 100%;
+	width: 33%;
+	background-color: white;
+	display: inline-block;
+	border-left: 1px solid rgb(16, 115, 224);
+	border-right: 1px solid rgb(16, 115, 224);
+}
+.skillsColumnCellRight {
+	height: 100%;
+	width: 33%;
+	background-color: white;
+	display: inline-block;
+}
+.fullContainer {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.imageDisplay {
+	width: 100%;
+	height: 45vh;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.projectPageAbout {
+	text-align: center;
+	font-size: large;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	width: 55%;
+	text-align: center;
+}

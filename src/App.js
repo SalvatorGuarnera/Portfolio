@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
 import About from './pages/about/about';
 import Skills from './pages/skills/skills';
-import Resume from './pages/resume/resume';
-import DeskImage from './images/Desk.png';
-import Desk from './components/Desk/Desk';
 
 //MUI
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
-import Typography from '@material-ui/core/Typography';
-import color from '@material-ui/core/colors/amber';
-import { grey, blue } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
 	palette: {
@@ -57,17 +49,6 @@ class App extends Component {
 				<About />
 				<Skills />
 			</MuiThemeProvider>
-			// <div className="background-image">
-			//   <MuiThemeProvider theme={theme}>
-			//     <Router>
-			//       <Navbar/>
-			//         <Switch>
-			//           <Route exact path="/about" component={About}/>
-			//           <Route exact path="/projects" component={Projects}/>
-			//           <Route exact path="/resume" component={Resume}/>
-			//         </Switch>
-			//     </Router>
-			//   </MuiThemeProvider>
 		);
 	}
 }
