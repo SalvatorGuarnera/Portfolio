@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Grid } from '@material-ui/core';
 import About from './pages/about/about';
 import Skills from './pages/skills/skills';
 
@@ -46,8 +47,14 @@ class App extends Component {
 	render() {
 		return (
 			<MuiThemeProvider theme={theme}>
-				<About />
-				<Skills />
+				<Grid container direction="column" justify="center" alignItems="center" spacing={0}>
+					<Grid item>
+						<About />
+					</Grid>
+					<Grid item>
+						<Skills />
+					</Grid>
+				</Grid>
 			</MuiThemeProvider>
 		);
 	}

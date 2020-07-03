@@ -6,10 +6,12 @@ import styles from './about.module.css';
 export class About extends Component {
 	render() {
 		return (
-			<div className={styles.backgroundImage}>
-				<TopBar />
-				<div className={styles.aboutContainer}>
-					<MainInfo />
+			<div className={styles.fullContainer}>
+				<div className={styles.backgroundImage}>
+					<TopBar />
+					<div className={styles.aboutContainer}>
+						<MainInfo />
+					</div>
 				</div>
 			</div>
 		);

@@ -1,3 +1,7 @@
+.fullContainer {
+	width: 100vw;
+}
+
 .backgroundImage {
 	background-image: url('../../images/NewYork.jpeg');
 	/* background-color: blue; */
