@@ -1,0 +1,71 @@
+.mainGrid {
+	display: grid;
+	grid-template-areas: "overlap";
+	grid-row: 1fr;
+	grid-column: 1fr;
+	background-color: red;
+	height: 80vh;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.topHalf {
+	position: relative;
+	grid-area: overlap;
+	background-color: rgb(16, 115, 224);
+	height: 50vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.bottomHalf {
+	position: relative;
+	grid-area: overlap;
+	background-color: white;
+	height: 50vh;
+	width: 100%;
+	z-index: 2;
+	top: 50vh;
+}
+
+.flexBox {
+	position: relative;
+	grid-area: overlap;
+	background-color: gray;
+	height: 80vh;
+	width: 75vw;
+	z-index: 3;
+	top: 10vh;
+	justify-self: center;
+	display: flex;
+}
+
+.flexItemOne {
+	background-color: white;
+	width: 25vw;
+	height: 80vh;
+	/* border: 1px solid black; */
+	border-top: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+}
+
+.skillHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bolder;
+	text-decoration: underline;
+	font-size: 2.5vmin;
+	margin-bottom: 2vh;
+	margin-top: 2.5vh;
+}
+
+.skillList {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 2.5vw;
+}
+
+.skillItem {
+	font-size: 2.5vmin;
+}

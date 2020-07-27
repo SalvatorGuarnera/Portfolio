@@ -3,6 +3,7 @@ import './App.css';
 import { Grid } from '@material-ui/core';
 import About from './pages/about/about';
 import Skills from './pages/skills/skills';
+import SkillGrid from './components/SkillGrid/skillgrid.tsx';
 
 //MUI
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
@@ -53,6 +54,7 @@ class App extends Component {
 					</Grid>
 					<Grid item>
 						<Skills />
+						<SkillGrid />
 					</Grid>
 				</Grid>
 			</MuiThemeProvider>
