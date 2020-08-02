@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 import About from './pages/about/about';
 import Skills from './pages/skills/skills';
 import SkillGrid from './components/SkillGrid/skillgrid.tsx';
+import { Projects } from './pages/projects/projects.js';
 
 //MUI
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
@@ -48,15 +49,20 @@ class App extends Component {
 	render() {
 		return (
 			<MuiThemeProvider theme={theme}>
-				<Grid container direction="column" justify="center" alignItems="center" spacing={0}>
-					<Grid item>
-						<About />
+				<div style={{ backgroundColor: 'white' }}>
+					<Grid container direction="column" justify="center" alignItems="center" spacing={1}>
+						<Grid item>
+							<About />
+						</Grid>
+						<Grid item>
+							<Skills />
+							<SkillGrid />
+						</Grid>
+						<Grid item>
+							<Projects />
+						</Grid>
 					</Grid>
-					<Grid item>
-						<Skills />
-						<SkillGrid />
-					</Grid>
-				</Grid>
+				</div>
 			</MuiThemeProvider>
 		);
 	}
