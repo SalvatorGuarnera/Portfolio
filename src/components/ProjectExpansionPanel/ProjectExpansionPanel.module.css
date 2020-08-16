@@ -1,0 +1,30 @@
+.mainGrid {
+	display: grid;
+	grid-template-areas: "overlap";
+	grid-row: 1fr;
+	grid-column: 1fr;
+	height: 25vh;
+	width: 100vw;
+}
+
+.topLeftTriangle {
+	position: relative;
+	grid-area: overlap;
+	width: 50vw;
+	height: 0;
+	border-top: 25vh solid red;
+	border-right: 25vh solid transparent;
+	z-index: 1;
+}
+
+.bottomRightTriangle {
+	position: relative;
+	grid-area: overlap;
+	justify-self: right;
+	float: right;
+	width: calc(100vw - (50vw + 25vh));
+	height: 0;
+	border-bottom: 25vh solid white;
+	border-left: 25vh solid transparent;
+	z-index: 2;
+}
