@@ -27,11 +27,11 @@ export const ProjectExpansionPanel: React.FC<{
 					<Grid item>
 						<h3>Technologies</h3>
 						<Grid container direction="row" justify="space-evenly">
-							{technologies.map((techChunk) => (
-								<Grid item>
+							{technologies.map((techChunk, techChunkIndex) => (
+								<Grid key={`grid-tech-item-${techChunkIndex}`} item>
 									<List>
-										{techChunk.map((technology) => (
-											<ListItem>
+										{techChunk.map((technology, techIndex) => (
+											<ListItem key={`tech-item-${techChunkIndex}-${techIndex}`}>
 												<h5>{technology}</h5>
 											</ListItem>
 										))}

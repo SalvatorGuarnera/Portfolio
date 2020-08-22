@@ -7,7 +7,7 @@ import SkillGrid from './components/SkillGrid/skillgrid.tsx';
 import { Projects } from './pages/projects/projects.tsx';
 
 //MUI
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 const theme = createMuiTheme({

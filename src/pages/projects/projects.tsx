@@ -7,7 +7,7 @@ export const Projects = () => {
 	const projectArray = grabProjectObjects();
 
 	return (
-		<div style={{ marginTop: '20vh' }}>
+		<div style={{ marginTop: '20vh', borderTop: '1px solid black' }}>
 			<Grid
 				container
 				direction="column"
@@ -22,8 +22,9 @@ export const Projects = () => {
 					</div>
 				</Grid>
 				<Grid style={{ width: '100vw' }} item>
-					{projectArray.map((project) => (
+					{projectArray.map((project, index) => (
 						<ProjectExpansionPanel
+							key={'project-expansion-panel-' + index}
 							name={project.name}
 							technologies={project.technologies}
 							about={project.about}
