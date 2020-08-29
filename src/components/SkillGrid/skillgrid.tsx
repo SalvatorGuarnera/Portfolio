@@ -28,7 +28,7 @@ export const SkillGrid = () => {
 			<div className={styles.topHalf} />
 			<div className={styles.bottomHalf} />
 			<div className={styles.flexBox}>
-				<div className={styles.flexItemOne} style={{ borderLeft: '0.5px solid gray' }}>
+				<div className={styles.flexItemOne}>
 					<Grid container direction="column" justify="center" alignItems="center">
 						<Grid item>
 							<div className={styles.skillHeader}>
@@ -42,10 +42,7 @@ export const SkillGrid = () => {
 						))}
 					</Grid>
 				</div>
-				<div
-					className={styles.flexItemOne}
-					style={{ borderLeft: '0.5px solid gray', borderRight: '0.5px solid gray' }}
-				>
+				<div className={styles.flexItemTwo}>
 					<Grid container direction="column" justify="center" alignItems="center">
 						<Grid item>
 							<div className={styles.skillHeader}>
@@ -59,7 +56,7 @@ export const SkillGrid = () => {
 						))}
 					</Grid>
 				</div>
-				<div className={styles.flexItemOne} style={{ borderRight: '0.5px solid gray' }}>
+				<div className={styles.flexItemThree}>
 					<Grid container direction="column" justify="center" alignItems="center">
 						<Grid item>
 							<div className={styles.skillHeader}>

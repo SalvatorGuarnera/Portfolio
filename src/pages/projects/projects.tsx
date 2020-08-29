@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './projects.module.css';
 import { Grid } from '@material-ui/core';
 import { ProjectExpansionPanel } from '../../components/ProjectExpansionPanel/ProjectExpansionPanel';
+import { Project } from '../../models/project.model';
 
-export const Projects = () => {
-	const projectArray = grabProjectObjects();
-
+export const Projects: React.FC<{
+	projectData: Array<Project>;
+}> = ({ projectData }) => {
 	return (
-		<div style={{ marginTop: '20vh', borderTop: '1px solid black' }}>
+		<div className={styles.container} style={{ borderTop: '1px solid black' }}>
 			<Grid
 				container
 				direction="column"
@@ -22,13 +23,14 @@ export const Projects = () => {
 					</div>
 				</Grid>
 				<Grid style={{ width: '100vw' }} item>
-					{projectArray.map((project, index) => (
+					{projectData.map((project, index) => (
 						<ProjectExpansionPanel
 							key={'project-expansion-panel-' + index}
 							name={project.name}
 							technologies={project.technologies}
 							about={project.about}
 							linkSet={project.linkSet}
+							banner={project.banner}
 						/>
 					))}
 				</Grid>

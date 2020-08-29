@@ -3,9 +3,36 @@
 	margin-top: -15vh;
 	color: white;
 	text-align: center;
-	font-size: large;
+	/* font-size: large; */
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
-	width: 55%;
-	width: 100vw;
+	/* width: 55%; */
+	/* width: 100vw; */
+}
+
+.aboutMeText h2 {
+	font-size: 6vmin;
+}
+
+.aboutParagraphText p {
+	font-size: 3vmin;
+}
+
+@media (min-width: 0px) {
+	.aboutMeText h2 {
+		font-size: 5vmin;
+	}
+	.aboutParagraphText p {
+		font-size: 4vmin;
+	}
+}
+
+@media (min-width: 600px) {
+	.aboutMeText h2 {
+		font-size: 6vmin;
+	}
+
+	.aboutParagraphText p {
+		font-size: 3vmin;
+	}
 }

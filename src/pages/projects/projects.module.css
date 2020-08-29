@@ -1,3 +1,7 @@
+.container {
+	/* margin-top: 20vh; */
+}
+
 .projectPageMain {
 	background-color: white;
 	border-top: 2px solid rgb(16, 115, 224);
@@ -24,4 +28,16 @@
 	color: white;
 	width: 55%;
 	text-align: center;
+}
+
+@media (min-width: 0px) {
+	.container {
+		/* margin-top: 120vh; */
+	}
+}
+
+@media (min-width: 600px) {
+	.container {
+		/* margin-top: 20vh; */
+	}
 }

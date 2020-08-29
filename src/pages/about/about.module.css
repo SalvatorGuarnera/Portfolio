@@ -26,3 +26,42 @@
 	border-style: solid;
 	border-color: rgb(16, 115, 224);
 }
+
+@media (min-width: 0px) {
+	.aboutContainer {
+		height: 85vh;
+	}
+}
+
+@media (min-width: 375px) {
+	@media (min-height: 812px) {
+		.aboutContainer {
+			height: 80vh;
+		}
+	}
+}
+
+@media (min-width: 450px) {
+	@media (min-height: 600px) {
+		.aboutContainer {
+			height: 100vh;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.aboutContainer {
+		height: 120vh;
+	}
+	@media (min-height: 1024px) {
+		.aboutContainer {
+			height: 100vh;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.aboutContainer {
+		height: 125vh;
+	}
+}

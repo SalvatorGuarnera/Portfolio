@@ -4,7 +4,8 @@
 	grid-row: 1fr;
 	grid-column: 1fr;
 	background-color: red;
-	height: 80vh;
+	/* height: 100%; */
+	height: 100vh;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -35,16 +36,34 @@
 	height: 80vh;
 	width: 75vw;
 	z-index: 3;
-	top: 10vh;
+	/* top: 10vh; */
 	justify-self: center;
-	display: flex;
+	display: flexbox;
 }
 
 .flexItemOne {
 	background-color: white;
 	width: 25vw;
+	flex: 25vw;
 	height: 80vh;
-	/* border: 1px solid black; */
+	border-top: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+}
+
+.flexItemTwo {
+	background-color: white;
+	width: 25vw;
+	flex: 25vw;
+	height: 80vh;
+	border-top: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+}
+
+.flexItemThree {
+	background-color: white;
+	width: 25vw;
+	flex: 25vw;
+	height: 80vh;
 	border-top: 0.5px solid gray;
 	border-bottom: 0.5px solid gray;
 }
@@ -68,4 +87,130 @@
 
 .skillItem {
 	font-size: 2.5vmin;
+}
+
+@media (min-width: 0px) {
+	.mainGrid {
+		height: 180vh;
+	}
+	.flexBox {
+		width: 100vw;
+	}
+	.flexItemOne {
+		width: 100vw;
+		height: 60vh;
+		flex: 100vw;
+		border-left: none;
+		border-bottom: 0.5px solid gray;
+	}
+	.flexItemTwo {
+		width: 100vw;
+		height: 60vh;
+		flex: 100vw;
+		border-left: none;
+		border-right: none;
+		border-bottom: 0.5px solid gray;
+		border-top: none;
+	}
+	.flexItemThree {
+		width: 100vw;
+		height: 60vh;
+		flex: 100vw;
+		border-right: none;
+		border-top: none;
+		border-bottom: none;
+	}
+	.skillHeader {
+		font-size: 4vmin;
+	}
+	.skillItem {
+		font-size: 3vmin;
+	}
+}
+
+@media (min-width: 600px) {
+	.mainGrid {
+		height: 240vmin;
+	}
+	.flexItemOne {
+		height: 80vmin;
+	}
+	.flexItemTwo {
+		height: 80vmin;
+	}
+	.flexItemThree {
+		height: 80vmin;
+	}
+	@media (min-height: 1024px) {
+		.mainGrid {
+			height: 240vh;
+		}
+		.flexItemOne {
+			height: 80vh;
+		}
+		.flexItemTwo {
+			height: 80vh;
+		}
+		.flexItemThree {
+			height: 80vh;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.mainGrid {
+		height: 240vh;
+	}
+	@media (min-height: 1366px) {
+		.flexItemOne {
+			height: 80vh;
+		}
+		.flexItemTwo {
+			height: 80vh;
+		}
+		.flexItemThree {
+			height: 80vh;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.mainGrid {
+		height: 100vh;
+	}
+	.flexBox {
+		width: 75vw;
+		display: flex;
+	}
+	.flexItemOne {
+		width: 25vw;
+		height: 80vh;
+		flex: 25vw;
+		border-left: 0.5px solid gray;
+		border-top: 0.5px solid gray;
+		border-bottom: 0.5px solid gray;
+	}
+	.flexItemTwo {
+		width: 25vw;
+		height: 80vh;
+		flex: 25vw;
+		border-left: 0.5px solid gray;
+		border-right: 0.5px solid gray;
+		border-top: 0.5px solid gray;
+		border-bottom: 0.5px solid gray;
+	}
+	.flexItemThree {
+		width: 25vw;
+		height: 80vh;
+		flex: 25vw;
+		border-right: 0.5px solid gray;
+		border-top: 0.5px solid gray;
+		border-bottom: 0.5px solid gray;
+	}
+	.skillHeader {
+		font-size: 2.5vmin;
+	}
+	.skillItem {
+		font-size: 2.5vmin;
+	}
 }
