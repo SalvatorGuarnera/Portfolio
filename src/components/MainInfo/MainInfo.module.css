@@ -37,7 +37,6 @@
 	align-content: center;
 }
 .viewWorkButtonContainer {
-	width: 50%;
 	background-color: white;
 	height: 10vh;
 	position: relative;
@@ -46,27 +45,39 @@
 	justify-content: center;
 	align-items: center;
 }
-a.buttonTwo {
-	display: inline-block;
-	padding: 0.35em 1.2em;
-	border: 0.1em solid rgb(16, 115, 224);
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	text-decoration: none;
-	/* font-family: 'Roboto', sans-serif; */
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	color: rgb(16, 115, 224);
-	text-align: center;
-	transition: all 0.2s;
-	font-size: 1.25rem;
 
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+.myWorkButton {
+	background-color: white !important;
+	color: rgb(16, 115, 224) !important;
+	border-color: rgb(16, 115, 224) !important;
+	font-family: 'Open Sans', sans-serif !important;
+	width: 15vw;
+	height: 6vh;
 }
-a.buttonTwo:hover {
-	color: #ffffff;
-	background-color: rgb(16, 115, 224);
+
+.myWorkButton:hover {
+	background-color: rgb(16, 115, 224) !important;
+	color: white !important;
+}
+
+@media (min-width: 0px) {
+	.infoContainer h2 {
+		font-size: 6vmin;
+	}
+	.subtitleText {
+		font-size: 4vmin;
+	}
+	.myWorkButton {
+		width: 40vw;
+		font-size: 4vmin !important;
+	}
+}
+
+@media (min-width: 600px) {
+	.subtitleText {
+		font-size: 3vmin;
+	}
+	.myWorkButton {
+		font-size: 3vmin !important;
+	}
 }

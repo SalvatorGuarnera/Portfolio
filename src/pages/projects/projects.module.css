@@ -1,11 +1,12 @@
+.container {
+	/* margin-top: 20vh; */
+}
+
 .projectPageMain {
-	font-size: 0.5rem;
-	width: auto;
-	height: 60vh;
-	background-color: rgb(16, 115, 224);
-	font-family: 'Open Sans', sans-serif;
-	color: white;
-	text-align: center;
+	background-color: white;
+	border-top: 2px solid rgb(16, 115, 224);
+	width: 100vw;
+	height: 75vh;
 }
 
 .projectPageMain h2 {
@@ -27,4 +28,16 @@
 	color: white;
 	width: 55%;
 	text-align: center;
+}
+
+@media (min-width: 0px) {
+	.container {
+		/* margin-top: 120vh; */
+	}
+}
+
+@media (min-width: 600px) {
+	.container {
+		/* margin-top: 20vh; */
+	}
 }

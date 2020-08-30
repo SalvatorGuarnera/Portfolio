@@ -1,0 +1,66 @@
+.mainGrid {
+	display: grid;
+	grid-template-areas: "overlap";
+	grid-row: 1fr;
+	grid-column: 1fr;
+	height: 25vh;
+	width: 100vw;
+	/* background-position: center; */
+	background-position-y: center;
+	background-position-x: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.topLeftTriangle {
+	position: relative;
+	grid-area: overlap;
+	width: 50vw;
+	border-top: 25vh solid none;
+	border-right: 25vh solid transparent;
+	z-index: 1;
+}
+
+.bottomRightTriangle {
+	position: relative;
+	grid-area: overlap;
+	justify-self: right;
+	float: right;
+	width: calc(100vw - (50vw + 25vh));
+	height: 0;
+	border-bottom: 25vh solid white;
+	border-left: 25vh solid transparent;
+	z-index: 2;
+}
+
+@media (min-width: 0px) {
+	.topLeftTriangle {
+		width: 30vw;
+		border-top: 25vh solid transparent;
+		border-right: 25vh solid transparent;
+	}
+	.bottomRightTriangle {
+		width: calc(100vw - (30vw + 25vh));
+		border-bottom: 25vh solid white;
+		border-left: 25vh solid transparent;
+	}
+	.mainGrid {
+		background-size: cover;
+	}
+}
+
+@media (min-width: 600px) {
+	.topLeftTriangle {
+		width: 50vw;
+		border-top: 25vh solid transparent;
+		border-right: 25vh solid transparent;
+	}
+	.bottomRightTriangle {
+		width: calc(100vw - (50vw + 25vh));
+		border-bottom: 25vh solid white;
+		border-left: 25vh solid transparent;
+	}
+	.mainGrid {
+		background-size: contain;
+	}
+}

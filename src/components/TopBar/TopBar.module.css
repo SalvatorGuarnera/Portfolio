@@ -19,7 +19,7 @@
 .topBarRight {
 	background-color: white;
 	height: 65%;
-	width: 45%;
+	width: 45vw;
 	position: relative;
 }
 .topBarLeft {
@@ -42,28 +42,37 @@
 a {
 	text-decoration: none;
 }
-a.buttonOne {
-	display: inline-block;
-	padding: 0.35em 1.2em;
-	border: 0.1em solid rgb(16, 115, 224);
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 1.25em;
-	box-sizing: border-box;
-	text-decoration: none;
-	/* font-family: 'Roboto', sans-serif; */
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	color: rgb(16, 115, 224);
-	text-align: center;
-	transition: all 0.2s;
-	font-size: 1.25rem;
 
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 10%;
+.contactButton {
+	background-color: white !important;
+	color: rgb(16, 115, 224) !important;
+	border-color: rgb(16, 115, 224) !important;
+	font-family: 'Open Sans', sans-serif !important;
+	width: 15vw;
+	height: 6vh;
 }
-a.buttonOne:hover {
-	color: #ffffff;
-	background-color: rgb(16, 115, 224);
+
+.contactButton:hover {
+	background-color: rgb(16, 115, 224) !important;
+	color: white !important;
+}
+
+@media (min-width: 0px) {
+	.contactButton {
+		width: 40vw;
+		font-size: 4vmin !important;
+	}
+}
+
+@media (min-width: 600px) {
+	.contactButton {
+		width: 35vw;
+		font-size: 3vmin !important;
+	}
+}
+
+@media (min-width: 960px) {
+	.contactButton {
+		width: 20vw;
+	}
 }
