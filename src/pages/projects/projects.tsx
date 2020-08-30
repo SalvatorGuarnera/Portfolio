@@ -39,44 +39,4 @@ export const Projects: React.FC<{
 	);
 };
 
-function grabProjectObjects() {
-	const kegstand = {
-		name: 'Kegstand - The College Network',
-		technologies: [
-			[ 'Swift', 'Objective-C', 'Xcode' ],
-			[ 'Node.js', 'Express.js', 'Stripe iOS SDK' ],
-			[ 'Firebase Realtime Database', 'Cloud Firestore', 'Google Cloud Functions' ]
-		],
-		about: 'Here is a description about Kegstand the College Network',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const stockRank = {
-		name: 'StockRank',
-		technologies: [
-			[ 'Swift', 'Xcode', '.NET' ],
-			[ 'Node.js', 'C#', 'Selenium Webdriver' ],
-			[ 'Firebase Realtime Database', 'Cloud Firestore', 'Google Cloud Functions' ],
-			[ 'Docker' ]
-		],
-		about: 'Here is a description about StockRank',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const courtView = {
-		name: 'CourtView Webcrawler',
-		technologies: [ [ 'C#', 'Selenium Webdriver', 'Xcode' ] ],
-		about: 'Here is a description about Courtview',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const projectArray = [];
-
-	projectArray.push(kegstand);
-	projectArray.push(stockRank);
-	projectArray.push(courtView);
-
-	return projectArray;
-}
-
 export default Projects;
