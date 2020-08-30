@@ -1,9 +1,8 @@
 This is the code for my Website Portfolio.  
 
-The website is programmed with a React.js / CSS front end.  Future plans include migrating my project date to an AWS DynamoDB and using Lambda Functions to POST / GET all projects for loading up the website.  
+The website is programmed with a React, TypeScript, JavaScript, Material UI, CSS front end.  The backend is programmed with Node.js with Google Cloud Functions, Google Firestore, and Google Hosting.
 
 I also aim to use Amazon SES to include a basic email portal via the website for potential recruiters / hirers to reach out to me directly.
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
