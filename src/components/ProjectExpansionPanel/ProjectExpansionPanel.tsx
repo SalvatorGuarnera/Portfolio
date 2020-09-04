@@ -84,11 +84,20 @@ export const ProjectExpansionPanel: React.FC<{
 						<div className={styles.detailText}>
 							{linkSet['iOS'] || linkSet['github'] ? (
 								<React.Fragment>
-									<h3 style={{ paddingLeft: '2.5vw' }}>Links</h3>
+									<hr
+										style={{
+											borderTop: '1px solid rgb(16, 115, 224)',
+											margin: '2.5vw'
+										}}
+									/>
 									<List dense={true}>
 										<ListItem classes={{ root: listClass.item }}>
 											{linkSet['iOS'] ? (
-												<Button classes={{ root: listClass.button }}>
+												<Button
+													classes={{ root: listClass.button }}
+													target="_blank"
+													href={linkSet['iOS']}
+												>
 													<img
 														src={AppStore}
 														alt="iOS button"
@@ -99,7 +108,12 @@ export const ProjectExpansionPanel: React.FC<{
 												undefined
 											)}
 											{linkSet['github'] ? (
-												<Button classes={{ root: listClass.button }} variant="outlined">
+												<Button
+													classes={{ root: listClass.button }}
+													variant="outlined"
+													target="_blank"
+													href={linkSet['github']}
+												>
 													<img
 														src={GitHub}
 														alt="Github Button"

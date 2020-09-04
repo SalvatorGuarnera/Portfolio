@@ -8,7 +8,7 @@ export const Projects: React.FC<{
 	projectData: Array<Project>;
 }> = ({ projectData }) => {
 	return (
-		<div className={styles.container} style={{ borderTop: '1px solid black' }}>
+		<div className={styles.container}>
 			<Grid
 				container
 				direction="column"
@@ -18,7 +18,13 @@ export const Projects: React.FC<{
 				style={{ width: '100vw', padding: 'none', margin: 'none' }}
 			>
 				<Grid item>
-					<div>
+					<div className={styles.projectTitleHolder}>
+						<hr
+							style={{
+								borderTop: '1px solid rgb(16, 115, 224)',
+								width: '100vw'
+							}}
+						/>
 						<h3>Projects</h3>
 					</div>
 				</Grid>
