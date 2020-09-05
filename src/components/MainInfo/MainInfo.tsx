@@ -30,6 +30,7 @@ export const MainInfo = () => {
 						className={styles.myWorkButton}
 						classes={{ root: buttonClass.root, label: buttonClass.label }}
 						variant="outlined"
+						href="#project-section"
 					>
 						See My Work!
 					</Button>

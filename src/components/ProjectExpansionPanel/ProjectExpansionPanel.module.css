@@ -5,11 +5,12 @@
 	grid-column: 1fr;
 	height: 25vh;
 	width: 100vw;
-	/* background-position: center; */
 	background-position-y: center;
 	background-position-x: left;
 	background-repeat: no-repeat;
 	background-size: contain;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
 }
 
 .topLeftTriangle {
@@ -28,9 +29,30 @@
 	float: right;
 	width: calc(100vw - (50vw + 25vh));
 	height: 0;
-	border-bottom: 25vh solid white;
+	border-bottom: 25vh solid transparent;
 	border-left: 25vh solid transparent;
 	z-index: 2;
+	color: white;
+	text-align: center;
+}
+
+.bottomRightTriangle p {
+	padding-top: 5vh;
+	font-size: 4vmin;
+}
+
+.detailText {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.detailText h3 {
+	font-size: 3vmin;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.detailText h5 {
+	font-size: 2.5vmin;
 }
 
 @media (min-width: 0px) {
@@ -41,7 +63,7 @@
 	}
 	.bottomRightTriangle {
 		width: calc(100vw - (30vw + 25vh));
-		border-bottom: 25vh solid white;
+		border-bottom: 25vh solid rgb(16, 115, 224);
 		border-left: 25vh solid transparent;
 	}
 	.mainGrid {
@@ -57,7 +79,7 @@
 	}
 	.bottomRightTriangle {
 		width: calc(100vw - (50vw + 25vh));
-		border-bottom: 25vh solid white;
+		border-bottom: 25vh solid rgb(16, 115, 224);
 		border-left: 25vh solid transparent;
 	}
 	.mainGrid {

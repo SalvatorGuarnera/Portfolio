@@ -7,9 +7,24 @@ import {
 	ExpansionPanelDetails,
 	List,
 	ListItem,
-	lighten
+	Button
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { Technologies, LinkSet } from '../../models/project.model';
+import AppStore from '../../images/AppStore.svg';
+import GitHub from '../../images/GitHub_Logo.png';
+
+const listStylings = makeStyles({
+	item: {
+		paddingLeft: '2.5vw',
+		paddingTop: '0',
+		paddingBottom: '0',
+		paddingRight: '0'
+	},
+	button: {
+		padding: '0'
+	}
+});
 
 export const ProjectExpansionPanel: React.FC<{
 	name: string;
@@ -18,6 +33,7 @@ export const ProjectExpansionPanel: React.FC<{
 	linkSet: LinkSet;
 	banner: string;
 }> = ({ name, technologies, about, linkSet, banner }) => {
+	const listClass = listStylings();
 	const cleanTechData = scrubTechData(technologies);
 
 	return (
@@ -36,26 +52,84 @@ export const ProjectExpansionPanel: React.FC<{
 				</div>
 			</ExpansionPanelSummary>
 			<ExpansionPanelDetails>
-				<Grid container direction="column" justify="flex-start" alignItems="flex-start">
+				<Grid container direction="column" justify="flex-start" alignItems="stretch">
 					<Grid item>
-						<h3>About</h3>
-						<p>{about}</p>
+						<div className={styles.detailText}>
+							<h3 style={{ paddingLeft: '2.5vw' }}>About</h3>
+							<h5 style={{ paddingLeft: '2.5vw', paddingRight: '15vw' }}>{about}</h5>
+						</div>
 					</Grid>
 					<Grid item>
-						<h3>Technologies</h3>
-						<Grid container direction="row" justify="space-evenly">
-							{cleanTechData.map((techChunk: string[], techChunkIndex) => (
-								<Grid key={`grid-tech-item-${techChunkIndex}`} item>
-									<List>
-										{techChunk.map((technology, techIndex) => (
-											<ListItem key={`tech-item-${techChunkIndex}-${techIndex}`}>
-												<h5>{technology}</h5>
-											</ListItem>
-										))}
+						<div className={styles.detailText}>
+							<h3 style={{ paddingLeft: '2.5vw' }}>Technologies</h3>
+							<Grid container direction="row" justify="flex-start">
+								{cleanTechData.map((techChunk: string[], techChunkIndex) => (
+									<Grid key={`grid-tech-item-${techChunkIndex}`} item>
+										<List dense={true}>
+											{techChunk.map((technology, techIndex) => (
+												<ListItem
+													classes={{ root: listClass.item }}
+													key={`tech-item-${techChunkIndex}-${techIndex}`}
+												>
+													<h5>{technology}</h5>
+												</ListItem>
+											))}
+										</List>
+									</Grid>
+								))}
+							</Grid>
+						</div>
+					</Grid>
+					<Grid item>
+						<div className={styles.detailText}>
+							{linkSet['iOS'] || linkSet['github'] ? (
+								<React.Fragment>
+									<hr
+										style={{
+											borderTop: '1px solid rgb(16, 115, 224)',
+											margin: '2.5vw'
+										}}
+									/>
+									<List dense={true}>
+										<ListItem classes={{ root: listClass.item }}>
+											{linkSet['iOS'] ? (
+												<Button
+													classes={{ root: listClass.button }}
+													target="_blank"
+													href={linkSet['iOS']}
+												>
+													<img
+														src={AppStore}
+														alt="iOS button"
+														style={{ height: 'auto', width: '200px' }}
+													/>
+												</Button>
+											) : (
+												undefined
+											)}
+											{linkSet['github'] ? (
+												<Button
+													classes={{ root: listClass.button }}
+													variant="outlined"
+													target="_blank"
+													href={linkSet['github']}
+												>
+													<img
+														src={GitHub}
+														alt="Github Button"
+														style={{ height: 'auto', width: '150px' }}
+													/>
+												</Button>
+											) : (
+												undefined
+											)}
+										</ListItem>
 									</List>
-								</Grid>
-							))}
-						</Grid>
+								</React.Fragment>
+							) : (
+								undefined
+							)}
+						</div>
 					</Grid>
 				</Grid>
 			</ExpansionPanelDetails>
@@ -67,9 +141,9 @@ const scrubTechData = (technologies: Array<Technologies>) => {
 	let mainArray: Array<Array<string>> = [];
 
 	technologies.forEach((techChunk) => {
-		Object.keys(techChunk).map((key) => {
+		Object.keys(techChunk).forEach((key) => {
 			let subArray: Array<string> = [];
-			techChunk[key].map((technology) => {
+			techChunk[key].forEach((technology) => {
 				subArray.push(technology);
 			});
 			mainArray.push(subArray);

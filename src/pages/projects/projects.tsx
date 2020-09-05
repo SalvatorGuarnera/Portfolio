@@ -8,7 +8,7 @@ export const Projects: React.FC<{
 	projectData: Array<Project>;
 }> = ({ projectData }) => {
 	return (
-		<div className={styles.container} style={{ borderTop: '1px solid black' }}>
+		<div className={styles.container}>
 			<Grid
 				container
 				direction="column"
@@ -18,7 +18,13 @@ export const Projects: React.FC<{
 				style={{ width: '100vw', padding: 'none', margin: 'none' }}
 			>
 				<Grid item>
-					<div>
+					<div className={styles.projectTitleHolder}>
+						<hr
+							style={{
+								borderTop: '1px solid rgb(16, 115, 224)',
+								width: '100vw'
+							}}
+						/>
 						<h3>Projects</h3>
 					</div>
 				</Grid>
@@ -38,45 +44,5 @@ export const Projects: React.FC<{
 		</div>
 	);
 };
-
-function grabProjectObjects() {
-	const kegstand = {
-		name: 'Kegstand - The College Network',
-		technologies: [
-			[ 'Swift', 'Objective-C', 'Xcode' ],
-			[ 'Node.js', 'Express.js', 'Stripe iOS SDK' ],
-			[ 'Firebase Realtime Database', 'Cloud Firestore', 'Google Cloud Functions' ]
-		],
-		about: 'Here is a description about Kegstand the College Network',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const stockRank = {
-		name: 'StockRank',
-		technologies: [
-			[ 'Swift', 'Xcode', '.NET' ],
-			[ 'Node.js', 'C#', 'Selenium Webdriver' ],
-			[ 'Firebase Realtime Database', 'Cloud Firestore', 'Google Cloud Functions' ],
-			[ 'Docker' ]
-		],
-		about: 'Here is a description about StockRank',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const courtView = {
-		name: 'CourtView Webcrawler',
-		technologies: [ [ 'C#', 'Selenium Webdriver', 'Xcode' ] ],
-		about: 'Here is a description about Courtview',
-		linkSet: [ 'linkOne.com' ]
-	};
-
-	const projectArray = [];
-
-	projectArray.push(kegstand);
-	projectArray.push(stockRank);
-	projectArray.push(courtView);
-
-	return projectArray;
-}
 
 export default Projects;

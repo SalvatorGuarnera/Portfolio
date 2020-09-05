@@ -7,6 +7,7 @@ import SkillGrid from './components/SkillGrid/skillgrid';
 import { Projects } from './pages/projects/projects';
 import apiWrapper from './utils/apiWrapper';
 import { Project } from './models/project.model';
+import LoadingModal from './components/LoadingModal/LoadingModal';
 
 //MUI
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
@@ -80,12 +81,14 @@ const App = () => {
 							<SkillGrid />
 						</Grid>
 						<Grid item>
-							<Projects projectData={projectArray} />
+							<div id="project-section">
+								<Projects projectData={projectArray} />
+							</div>
 						</Grid>
 					</Grid>
 				</div>
 			) : (
-				<div style={{ backgroundColor: 'red', width: '100vw', height: '10vh' }} />
+				<LoadingModal isOpen={!areProjectsLoaded} />
 			)}
 		</MuiThemeProvider>
 	);
