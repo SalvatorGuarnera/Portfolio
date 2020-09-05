@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Desk from '../Desk/Desk';
 //MUI
@@ -26,14 +26,31 @@ export const MainInfo = () => {
 			</div>
 			<div className={styles.viewWorkContainer}>
 				<div className={styles.viewWorkButtonContainer}>
-					<Button
-						className={styles.myWorkButton}
-						classes={{ root: buttonClass.root, label: buttonClass.label }}
-						variant="outlined"
-						href="#project-section"
-					>
-						See My Work!
-					</Button>
+					<Grid container direction="row" justify="space-around" alignItems="center" spacing={2}>
+						<Grid item>
+							<Button
+								className={styles.myWorkButton}
+								classes={{ root: buttonClass.root, label: buttonClass.label }}
+								variant="outlined"
+								href="#project-section"
+							>
+								See My Work
+							</Button>
+						</Grid>
+						<Grid item>
+							<Button
+								className={styles.myWorkButton}
+								classes={{ root: buttonClass.root, label: buttonClass.label }}
+								variant="outlined"
+								target="_blank"
+								href={
+									'https://firebasestorage.googleapis.com/v0/b/website-d4dc2.appspot.com/o/Resume%20(2020%20Aug).pdf?alt=media&token=a82d155f-883c-4b2b-8a8a-b713f77c8b38'
+								}
+							>
+								View Resume
+							</Button>
+						</Grid>
+					</Grid>
 				</div>
 			</div>
 			<br />

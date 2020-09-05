@@ -51,7 +51,7 @@
 	color: rgb(16, 115, 224) !important;
 	border-color: rgb(16, 115, 224) !important;
 	font-family: 'Open Sans', sans-serif !important;
-	width: 15vw;
+	width: 5vw;
 	height: 6vh;
 }
 
@@ -71,6 +71,9 @@
 		width: 40vw;
 		font-size: 4vmin !important;
 	}
+	.viewWorkButtonContainer {
+		width: 90vw;
+	}
 }
 
 @media (min-width: 600px) {
@@ -78,6 +81,10 @@
 		font-size: 3vmin;
 	}
 	.myWorkButton {
+		width: 15vw;
 		font-size: 3vmin !important;
+	}
+	.viewWorkButtonContainer {
+		width: 40vw;
 	}
 }
