@@ -14,7 +14,7 @@ const buttonClasses = makeStyles({
 	}
 });
 
-export const MainInfo = () => {
+export const MainInfo: React.FC<{ resumeUrl: string }> = ({ resumeUrl }) => {
 	const buttonClass = buttonClasses();
 	return (
 		<div className={styles.infoContainer}>
@@ -43,9 +43,7 @@ export const MainInfo = () => {
 								classes={{ root: buttonClass.root, label: buttonClass.label }}
 								variant="outlined"
 								target="_blank"
-								href={
-									'https://firebasestorage.googleapis.com/v0/b/website-d4dc2.appspot.com/o/Resume%20(2020%20Aug).pdf?alt=media&token=a82d155f-883c-4b2b-8a8a-b713f77c8b38'
-								}
+								href={resumeUrl}
 							>
 								View Resume
 							</Button>

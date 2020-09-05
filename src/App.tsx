@@ -50,7 +50,10 @@ const theme = createMuiTheme({
 
 const App = () => {
 	const [ areProjectsLoaded, setAreProjectsLoaded ] = React.useState(false);
+	const [ isResumeLoaded, setIsResumeLoaded ] = React.useState(false);
+
 	const [ projectArray, setProjectArray ] = React.useState<Array<Project>>([]);
+	const [ resumeUrl, setResumeUrl ] = React.useState('');
 
 	React.useEffect(
 		() => {
@@ -68,13 +71,25 @@ const App = () => {
 		[ areProjectsLoaded ]
 	);
 
+	React.useEffect(
+		() => {
+			if (!isResumeLoaded) {
+				apiWrapper.get('getResume').then((res) => {
+					setResumeUrl(res.data.url);
+					setIsResumeLoaded(true);
+				});
+			}
+		},
+		[ isResumeLoaded ]
+	);
+
 	return (
 		<MuiThemeProvider theme={theme}>
-			{areProjectsLoaded ? (
+			{areProjectsLoaded && isResumeLoaded ? (
 				<div style={{ backgroundColor: 'white', overflow: 'hidden' }}>
 					<Grid container direction="column" justify="center" alignItems="center" spacing={1}>
 						<Grid item>
-							<About />
+							<About resumeUrl={resumeUrl} />
 						</Grid>
 						<Grid item>
 							<Skills />
