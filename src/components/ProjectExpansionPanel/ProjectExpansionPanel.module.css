@@ -34,6 +34,7 @@
 	z-index: 2;
 	color: white;
 	text-align: center;
+	padding-right: 10vw;
 }
 
 .bottomRightTriangle p {
@@ -55,6 +56,32 @@
 	font-size: 2.5vmin;
 }
 
+.iconHolder {
+	display: grid;
+	grid-template-areas: 'iconOverlap';
+	grid-row: 1fr;
+	grid-column: 1fr;
+}
+
+.appStoreIcon {
+	height: auto;
+}
+
+.githubIcon {
+	position: relative;
+	grid-area: iconOverlap;
+	height: auto;
+	z-index: 1;
+}
+
+.lockIcon {
+	position: relative;
+	grid-area: iconOverlap;
+	align-self: center;
+	justify-self: center;
+	z-index: 2;
+}
+
 @media (min-width: 0px) {
 	.topLeftTriangle {
 		width: 30vw;
@@ -68,6 +95,12 @@
 	}
 	.mainGrid {
 		background-size: cover;
+	}
+	.appStoreIcon {
+		width: 100px;
+	}
+	.githubIcon {
+		width: 75px;
 	}
 }
 
@@ -84,5 +117,11 @@
 	}
 	.mainGrid {
 		background-size: contain;
+	}
+	.appStoreIcon {
+		width: 200px;
+	}
+	.githubIcon {
+		width: 150px;
 	}
 }
