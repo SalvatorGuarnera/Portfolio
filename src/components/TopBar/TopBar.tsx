@@ -34,10 +34,10 @@ export const TopBar = () => {
 			<div className={styles.flexContainer}>
 				<div className={styles.topBarLeft}>
 					<div className={styles.logoContainer}>
-						<input type="image" src={Logo} name="logo" className={styles.logoButton} id="logo" alt="text" />
+						<input type="image" src={Logo} name="logo" className={styles.logoButton} id="logo" alt="logo" />
 					</div>
 				</div>
-				<div style={{ marginRight: '5vw', alignSelf: 'center', width: '75vw' }}>
+				<div style={{ marginRight: '5vw', alignSelf: 'center', width: '90vw' }}>
 					<Grid container direction="row" spacing={0} alignItems="center" justify="flex-end">
 						<Grid item>
 							<Button

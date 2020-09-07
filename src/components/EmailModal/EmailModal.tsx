@@ -1,8 +1,9 @@
 import React from 'react';
 import { Dialog, TextField, Grid, Button, CircularProgress, Snackbar } from '@material-ui/core';
-import {Alert} from '@material-ui/lab';
+import { Alert } from '@material-ui/lab';
 import { isEmailValid } from '../../utils/validators';
 import apiWrapper from '../../utils/apiWrapper';
+import styles from './EmailModal.module.css';
 
 export const EmailModal: React.FC<{
 	isOpen: boolean;
@@ -14,7 +15,7 @@ export const EmailModal: React.FC<{
 	const [ emailText, setEmailText ] = React.useState('');
 	const [ messageText, setMessageText ] = React.useState('');
 
-	const handleClose = (event : any, reason : any) => {
+	const handleClose = (event: any, reason: any) => {
 		if (reason === 'clickaway') {
 			return;
 		}
@@ -56,71 +57,72 @@ export const EmailModal: React.FC<{
 		<div>
 			<Dialog open={isOpen} maxWidth="md">
 				{!emailInTransit ? (
-					<Grid
-						style={{ width: '50vw', padding: '2.5vw' }}
-						container
-						direction="column"
-						justify="space-evenly"
-					>
-						<Grid item>
-							<div style={{ textAlign: 'center' }}>
-								<h3>Send me a message!</h3>
-							</div>
-						</Grid>
-						<Grid item>
-							<TextField
-								autoFocus
-								margin="dense"
-								id="email"
-								label="Your Email Address"
-								type="email"
-								variant="outlined"
-								fullWidth
-								onChange={handleEmailChange}
-								error={!emailIsValid}
-								helperText={
-									!emailIsValid ? 'Please enter a valid email address' : 'Please complete this field'
-								}
-							/>
-						</Grid>
-						<Grid item>
-							<TextField
-								margin="dense"
-								id="message"
-								label="Type your message here"
-								type="text"
-								variant="outlined"
-								fullWidth
-								multiline
-								rows={4}
-								onChange={handleMessageChange}
-							/>
-						</Grid>
-						<Grid item>
-							<div style={{ color: 'rgb(16, 115, 224)', paddingTop: '2.5vh' }}>
-								<Grid container direction="row" justify="flex-end" alignItems="flex-end">
-									<Grid item>
-										<Button color="inherit" onClick={closeModal}>
-											Cancel
-										</Button>
+					<div className={styles.dialogGrid}>
+						<Grid container direction="column" justify="space-evenly">
+							<Grid item>
+								<div style={{ textAlign: 'center' }}>
+									<h3>Send me a message!</h3>
+								</div>
+							</Grid>
+							<Grid item>
+								<TextField
+									autoFocus
+									margin="dense"
+									id="email"
+									label="Your Email Address"
+									type="email"
+									variant="outlined"
+									fullWidth
+									onChange={handleEmailChange}
+									error={!emailIsValid}
+									helperText={
+										!emailIsValid ? (
+											'Please enter a valid email address'
+										) : (
+											'Please complete this field'
+										)
+									}
+								/>
+							</Grid>
+							<Grid item>
+								<TextField
+									margin="dense"
+									id="message"
+									label="Type your message here"
+									type="text"
+									variant="outlined"
+									fullWidth
+									multiline
+									rows={4}
+									onChange={handleMessageChange}
+								/>
+							</Grid>
+							<Grid item>
+								<div style={{ color: 'rgb(16, 115, 224)', paddingTop: '2.5vh' }}>
+									<Grid container direction="row" justify="flex-end" alignItems="flex-end">
+										<Grid item>
+											<Button color="inherit" onClick={closeModal}>
+												Cancel
+											</Button>
+										</Grid>
+										<Grid item>
+											<Button
+												disabled={
+													!emailIsValid ||
+													emailText.trim().length === 0 ||
+													messageText.trim().length === 0
+												}
+												color="inherit"
+												onClick={verifyFields}
+											>
+												Send
+											</Button>
+										</Grid>
 									</Grid>
-									<Grid item>
-										<Button
-											disabled={
-												!emailIsValid ||
-												emailText.trim().length === 0 ||
-												messageText.trim().length === 0
-											}
-											color="inherit"
-											onClick={verifyFields}
-										>
-											Send
-										</Button>
-									</Grid>
-								</Grid>
-							</div>
+								</div>
+							</Grid>
 						</Grid>
-					</Grid>
+					</div>
 				) : (
 					<div
 						style={{
@@ -137,9 +139,7 @@ export const EmailModal: React.FC<{
 				)}
 			</Dialog>
 			<Snackbar open={emailWasSent} autoHideDuration={6000} onClose={handleClose}>
-				<Alert severity="success">
-					Email sent!
-				</Alert>
+				<Alert severity="success">Email sent!</Alert>
 			</Snackbar>
 		</div>
 	);

@@ -1,0 +1,16 @@
+.dialogGrid {
+	width: 50vw;
+	padding: 2.5vw;
+}
+
+@media (min-width: 0px) {
+	.dialogGrid {
+		width: 75vw;
+	}
+}
+
+@media (min-width: 600px) {
+	.dialogGrid {
+		width: 50vw;
+	}
+}
