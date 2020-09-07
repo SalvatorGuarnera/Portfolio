@@ -37,7 +37,6 @@ export const EmailModal: React.FC<{
 			await sendEmail(emailText, messageText);
 			setEmailWasSent(true);
 			setEmailInTransit(false);
-			//show snackbar
 			resetValues();
 			closeModal();
 		} else {
