@@ -123,7 +123,24 @@
 		font-size: 4vmin;
 	}
 	.skillItem {
-		font-size: 3vmin;
+		font-size: 3.5vmin;
+	}
+}
+
+@media (min-width: 450px){
+	@media (min-height: 600px){
+		.mainGrid {
+			height: 240vh;
+		}
+		.flexItemOne {
+			height: 80vh;
+		}
+		.flexItemTwo {
+			height: 80vh;
+		}
+		.flexItemThree {
+			height: 80vh;
+		}
 	}
 }
 
