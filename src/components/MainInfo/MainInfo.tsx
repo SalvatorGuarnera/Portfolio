@@ -52,7 +52,9 @@ export const MainInfo: React.FC<{ resumeUrl: string }> = ({ resumeUrl }) => {
 				</div>
 			</div>
 			<br />
-			<Desk />
+			<div className={styles.deskDiv}>
+				<Desk />
+			</div>
 		</div>
 	);
 };
