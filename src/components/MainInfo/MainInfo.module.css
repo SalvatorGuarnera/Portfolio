@@ -6,6 +6,11 @@
 	text-align: center;
 	font-size: 0.5rem;
 	font-family: 'Open Sans', sans-serif;
+	position: relative;
+	/* display: grid;
+	grid-template-areas: "overlap";
+	grid-row: 1fr;
+	grid-column: 1fr; */
 }
 
 .infoContainer h2 {
@@ -56,6 +61,12 @@
 .myWorkButton:hover {
 	background-color: rgb(16, 115, 224) !important;
 	color: white !important;
+}
+
+.deskDiv {
+	position: sticky;
+	text-align: center;
+	bottom: 0;
 }
 
 @media (min-width: 0px) {
