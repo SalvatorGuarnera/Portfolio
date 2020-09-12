@@ -1,14 +1,6 @@
 import React from 'react';
 import styles from './ProjectExpansionPanel.module.css';
-import {
-	Grid,
-	ExpansionPanel,
-	ExpansionPanelSummary,
-	ExpansionPanelDetails,
-	List,
-	ListItem,
-	Button
-} from '@material-ui/core';
+import { Grid, Accordion, AccordionSummary, AccordionDetails, List, ListItem, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Technologies, LinkSet } from '../../models/project.model';
 import AppStore from '../../images/AppStore.svg';
@@ -38,8 +30,8 @@ export const ProjectExpansionPanel: React.FC<{
 	const cleanTechData = scrubTechData(technologies);
 
 	return (
-		<ExpansionPanel>
-			<ExpansionPanelSummary>
+		<Accordion>
+			<AccordionSummary>
 				<div
 					className={styles.mainGrid}
 					style={{
@@ -51,8 +43,8 @@ export const ProjectExpansionPanel: React.FC<{
 						<p>{name}</p>
 					</div>
 				</div>
-			</ExpansionPanelSummary>
-			<ExpansionPanelDetails>
+			</AccordionSummary>
+			<AccordionDetails>
 				<Grid container direction="column" justify="flex-start" alignItems="stretch">
 					<Grid item>
 						<div className={styles.detailText}>
@@ -110,8 +102,8 @@ export const ProjectExpansionPanel: React.FC<{
 						</div>
 					</Grid>
 				</Grid>
-			</ExpansionPanelDetails>
-		</ExpansionPanel>
+			</AccordionDetails>
+		</Accordion>
 	);
 };
 
